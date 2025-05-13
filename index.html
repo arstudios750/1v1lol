@@ -1,43 +1,96 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1v1LoL</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="/css/dropdown.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="UTF-8">
-<script src="/js/main.js"></script>
-<script src="/js/dropdown.js"></script>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-</style>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons and styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+  <!-- Custom JS -->
+  <script src="/js/main.js" defer></script>
+  <script src="/js/dropdown.js" defer></script>
+  <script src="/js/test.js" defer></script>
+
+  <!-- Optional: Additional CSS -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      /* Style your header here */
+    }
+    .dropdown {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    .dropbtn {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 1;
+    }
+    .dropdown-content a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #333;
+    }
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+  </style>
 </head>
-<title>1v1LoL</title>
 
-<div class="header">
- 
+<body>
 
-</div>
-
-<div class="border"></div>
-
-<div class="dropdown" style="float:right;">
-  <button onclick="myFunction()" class="dropbtn"><span class="icon"><ion-icon class="i" name="settings-sharp"></ion-icon></span></button>
-  <div id="myDropdown" class="dropdown-content">
-    <a onclick="openFullscreen();" style="cursor: pointer; font-family: 'Poppins', sans-serif; text-decoration: none;">Fullscreen</a>
-    <a onclick="openGame();" style="cursor: pointer; font-family: 'Poppins', sans-serif; text-decoration: none;" target="_parent">Cloak Link</a>
-    <a href="chrome://new-tab-page" target="_parent" style="font-family: 'Poppins', sans-serif;">Panic</a>
+  <div class="header">
+    <!-- Optional header content -->
   </div>
-</div>
 
-<div class="text">
-<embed src="/dump/text.html">
-</div>
+  <div class="border"></div>
 
-<p align="center"><iframe src="https://1v1.lol/" id="iframe"></iframe></p>
+  <!-- Dropdown -->
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">
+      <ion-icon name="settings-sharp"></ion-icon>
+    </button>
+    <div id="myDropdown" class="dropdown-content">
+      <a onclick="openFullscreen();" style="cursor: pointer;">Fullscreen</a>
+      <a onclick="openGame();" style="cursor: pointer;">Cloak Link</a>
+      <a href="chrome://new-tab-page" target="_parent">Panic</a>
+    </div>
+  </div>
 
-<script src="/js/test.js"></script>
+  <!-- Text Embed -->
+  <div class="text">
+    <embed src="/dump/text.html" width="100%" height="200">
+  </div>
+
+  <!-- Game Iframe -->
+  <p align="center">
+    <iframe src="https://1v1.lol/" width="800" height="600" id="iframe"></iframe>
+  </p>
+
+</body>
+</html>
+
